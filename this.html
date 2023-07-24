@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object method</title>
+</head>
+<body>
+    <h1>School information System</h1>
+    <p>In this we learn about Object Method</p>
+    <p id="sch">A function in an Object is called Method.</p>
+    <script>
+        eval("alert(' how are you')");
+        const sch={
+            schName:"GHS",
+            emis:"34140092",
+            addr:"Shamsa Dhadda",
+            tehsil:"",
+            set teh(t){                        //here i set the value using setter. bcz getter nd setter for better  data quality
+                this.tehsil=t.toUpperCase();
+            },
+            fullName:function(){
+               const sir = teacher();
+                return "My School Name is " + this.schName + " " + this.addr  + " and EMIS Code is " + this.emis+ " "+ sir + "and this is located in "+this.tehsil;
+            }
+
+        };
+        sch.teh="Nowshera virkan";
+        function teacher(){
+            return "There are 8 Teacher in my school";
+        };
+        const myArr=Object.values(sch);
+        //console.log(myArr);
+        // let txt="";
+        // for(let x in sch){
+        //     txt+=sch[x] +" ";
+        // };
+        //document.getElementById("sch").innerHTML=txt; it get only text not function
+        
+        document.getElementById("sch").innerHTML=sch.fullName();
+        document.getElementById("sch").style.color="red";
+        document.getElementById("sch").style.background="yellow";
+        document.getElementById("sch").style.textAlign="center";
+        document.getElementById("sch").style.fontSize="60px";
+        document.getElementById("sch").style.border="2px solid black";
+        document.getElementById("sch").style.borderRadius="4px";
+        document.getElementById("sch").style.backgroundClip="content-box";
+        
+
+    </script>
+</body>
+</html>
